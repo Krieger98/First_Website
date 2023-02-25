@@ -12,19 +12,22 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="main-bg">
+<body>
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1>
+            <h1 onclick="getElementById('close-menu').checked = false;">
                 <a href="#home">HOME</a>
             </h1>
 
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#grid-one">Albums</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#pricing">Abbreviations</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -117,10 +120,98 @@
             </div>
         </div>
     </section>
+    <section id="pricing" class="white-bg section">
+        <div class="main-content top3-content">
+            <h2>Abbreviations</h2>
+            <p> Here you can see a few examples of some states's abbreviatons in different countries.
+            <div class="responsive-table">
+                <table>
+                    <caption>Abbreviations of the States</caption>
 
-
-    </div>
+                    <thead>
+                        <tr>
+                            <th>Country</th>
+                            <th>State</th>
+                            <th>Abbreviation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Brazil</td>
+                            <td>São Paulo</td>
+                            <td>SP</td>
+                        </tr>
+                        <tr>
+                            <td>Unites States</td>
+                            <td>Texas</td>
+                            <td>TX</td>
+                        </tr>
+                        <tr>
+                            <td>Brazil</td>
+                            <td>Rio Grande do Sul</td>
+                            <td>RS</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </section>
+
+    <section id="contact" class=" intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+                <h2>Thank You!</h2>
+                <p>
+                    And... so it ends my first website!
+                    I hope you liked it, soon there will be some more that you can find in my profile description. If
+                    you want you can send me a direct message or feedback by filling in the fields below.</p>
+
+            </div>
+            <div class="intro-img">
+                <img src="assets/images/contact-me.svg" alt="Man holding some papers and ponting a giant document.">
+            </div>
+            <div class="contact-form">
+                <fieldset class="form-grid">
+                    <legend>Contact Me:</legend>
+
+                    <div class="form-group">
+                        <label for="first-name" placeholder="Your Name">First Name:</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Your Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="Your E-mail">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="white-bg footer">
+        <p><a rel="nofollow" target="_blank" href="https://github.com/Krieger98">Made with <span class="heart">❤</span>
+                by Filipe
+                Krieger Job! (Click to enter in my GitHub!)</a></p>
+    </footer>
+
+    <a class="back-to-top" href="#">↑</a>
+
 </body>
 
 </html>
